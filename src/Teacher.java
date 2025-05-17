@@ -1,26 +1,17 @@
 import java.util.LinkedList;
 
-public class Teacher {
-    private String name;
+public class Teacher extends Mensch {
     private int capacity;
     private String roomNumber;
     private LinkedList<Students> Students;
     private LinkedList<String> teachingSubjects;
 
-    public Teacher(String name, int capacity, String roomNumber) {
-        this.name = name;
+    public Teacher(int alter,String vorname, String nachname,String addresse, String sozialversicherungsnummer, int capacity, String roomNumber) {
+        super(alter, vorname, nachname, addresse, sozialversicherungsnummer);
         this.capacity = capacity;
         this.roomNumber = roomNumber;
         this.Students = new LinkedList<Students> ();
         this.teachingSubjects = new LinkedList<String> ();
-    }
-
-    public String getName() {
-        return this.name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public int getCapacity() {

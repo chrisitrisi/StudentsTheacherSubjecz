@@ -1,40 +1,18 @@
 import java.util.HashMap;
 import java.util.LinkedList;
 
-public class Students {
-    private String name;
-    private int alter;
+public class Students extends Mensch{
     private final String studentID;
     private String className;
     private HashMap<Double, Boolean> fehlstunden; // Fehlstunden, ist enschuldigt
     private HashMap<String, Double> grades;       // Fach, Note
 
-    public Students(String name, int alter, String studentID, String className) {
-        this.name = name;
-        this.alter = alter;
+    public Students(int alter,String vorname, String nachname,String addresse, String sozialversicherungsnummer, String studentID, String className) {
+        super(alter, vorname, nachname, addresse, sozialversicherungsnummer);
         this.studentID = studentID;
         this.className = className;
         this.grades = new HashMap<String, Double> ();
     }
-
-
-    public String getName() {
-        return this.name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-
-    public int getAlter() {
-        return this.alter;
-    }
-
-    public void setAlter(int alter) {
-        this.alter = alter;
-    }
-
 
     public String getStudentID() {
         return this.studentID;
